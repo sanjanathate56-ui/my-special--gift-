@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Someone Special ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;overflow:hidden;display:flex;justify-content:center;align-items:center;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffd6e7,#e7d9ff,#d7f3ff)}
+.card{width:90%;max-width:430px;padding:30px 22px;text-align:center;background:rgba(255,255,255,.95);border-radius:30px;box-shadow:0 15px 50px rgba(0,0,0,.18)}
+.heart{font-size:48px;animation:pulse 1.1s infinite}h1{color:#d63384;margin:10px 0;font-size:29px}p{font-size:18px;line-height:1.6;color:#444}.gift{font-size:105px;cursor:pointer;animation:float 1.7s infinite;margin:10px}
+button{border:0;padding:13px 25px;border-radius:30px;background:#d63384;color:white;font-size:17px;cursor:pointer}.love{font-size:31px;font-weight:bold;color:#d63384;margin:15px 0}#message,#secret{display:none}.fall{position:fixed;top:-30px;pointer-events:none;animation:fall linear forwards}
+@keyframes pulse{50%{transform:scale(1.18)}}@keyframes float{50%{transform:translateY(-12px) rotate(3deg)}}@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:0}}
+</style></head>
+<body><div class="card">
+<div class="heart">❤️</div><h1>तुझ्यासाठी एक Special Gift 🎁</h1>
+<p>हे gift छोटंसं आहे, पण यामागची feeling मनापासून आहे. ✨</p>
+<div class="gift" onclick="openGift()">🎁</div><button onclick="openGift()">Open Your Gift 💝</button>
+<div id="message"><div class="love">I Love You ❤️</div>
+<p>तू माझ्यासाठी खूप Special Person आहेस. 💖</p>
+<p>तुझं माझ्या आयुष्यात असणं माझ्यासाठी खूप खास आहे. ✨</p>
+<p>हे फक्त एक Gift नाही,<br>तर माझ्या मनातलं एक छोटंसं सांगणं आहे. 💝</p>
+<button onclick="showSecret()">One More Thing 💌</button>
+<div id="secret"><p>तुझ्यासाठी माझ्या मनात असलेली ही feeling एका छोट्याशा website मध्ये सांगण्याचा प्रयत्न केला आहे. ✨</p><div class="love">You Are Special To Me 💗</div></div></div>
+</div><script>
+let opened=false;function openGift(){if(opened)return;opened=true;document.getElementById('message').style.display='block';for(let i=0;i<35;i++){let e=document.createElement('div');e.className='fall';e.textContent=['❤️','💖','💕','✨','💝'][Math.floor(Math.random()*5)];e.style.left=Math.random()*100+'vw';e.style.fontSize=(18+Math.random()*20)+'px';e.style.animationDuration=(2.5+Math.random()*3)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),6000)}}function showSecret(){document.getElementById('secret').style.display='block'}
+</script></body></html>
